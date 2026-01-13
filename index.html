@@ -199,49 +199,67 @@ body{
     </div>
 
 <style>
+  /* Este contenedor obliga a que el botón esté en el centro total */
+  .contenedor-centrado {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    height: 100vh;           /* Usa todo el alto de la pantalla */
+    width: 100%;
+  }
+
   .btn-listo {
-    background-color: #28a745; /* Verde inicial */
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 15px 35px; /* Un poco más grande para que se vea mejor */
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Esto hace que el cambio de color sea suave */
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
-  /* Cuando pasas el mouse por encima (Hover) se pone azul claro */
+  /* Cambio a azul al pasar el mouse */
   .btn-listo:hover {
     background-color: #007bff;
-    transform: translateY(-2px); /* Un pequeño salto para que se sienta vivo */
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
   }
 
-  /* Cuando haces clic (Active) se pone un azul más oscuro */
+  /* Azul más oscuro al hacer clic */
   .btn-listo:active {
     background-color: #0056b3;
-    transform: translateY(0);
+    transform: translateY(-1px);
   }
 
   .check {
-    font-size: 20px;
+    font-size: 22px;
   }
 </style>
 
-<button class="btn-listo" onclick="cerrarPagina()">
-  <span class="check">✔</span>
-  Listo
-</button>
+<div class="contenedor-centrado">
+  <button class="btn-listo" onclick="cerrarPagina()">
+    <span class="check">✔</span>
+    Listo
+  </button>
+</div>
 
 <script>
   function cerrarPagina() {
-    // Aquí puedes poner lo que quieras que haga al pulsar
-    alert("¡Botón presionado!");
-    // window.close(); // Esto solo funciona si la ventana fue abierta por script
+    // Intenta cerrar la ventana actual
+    window.close();
+    
+    // Respaldo: Si el navegador bloquea window.close(), 
+    // redirigir a una página en blanco es lo más limpio.
+    setTimeout(function(){
+       window.location.href = "about:blank";
+    }, 100);
   }
 </script>
 
