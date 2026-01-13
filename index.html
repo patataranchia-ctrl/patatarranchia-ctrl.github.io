@@ -10,6 +10,7 @@
             --blue-bg: #0b5fa5;
             --card-bg: #eef6fb;
             --primary: #0a6ccf;
+            --secondary: #5b768b;
             --text-dark: #1b1b1b;
             --border: #c9dbea;
             --success: #1fa600;
@@ -31,13 +32,15 @@
         .container {
             background-color: var(--card-bg);
             width: 100%;
-            max-width: 520px;
-            padding: 30px 25px 40px;
+            max-width: 560px;
+            padding: 35px 30px 40px;
+            border-radius: 14px;
+            margin: 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
@@ -48,50 +51,55 @@
 
         .brand {
             margin-top: 10px;
-            font-size: 42px;
-            font-weight: 700;
+            font-size: 56px;
+            font-weight: 800;
             color: var(--primary);
+            letter-spacing: 1px;
         }
 
         .subtitle {
-            font-size: 13px;
-            color: #4d6b82;
-            margin-top: 5px;
-        }
-
-        .data-row {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .label {
-            color: var(--primary);
-            font-weight: 600;
+            margin-top: 4px;
             font-size: 14px;
         }
 
-        .value {
-            margin-top: 3px;
-            color: var(--text-dark);
+        .subtitle .strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .subtitle .soft {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .data-row {
+            padding: 11px 0;
+            border-bottom: 1px solid var(--border);
             font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .data-row span {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .button {
-            margin-top: 35px;
+            margin-top: 40px;
             background-color: var(--success);
             color: white;
             text-align: center;
             padding: 16px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 18px;
-            font-weight: 600;
-            cursor: default;
+            font-weight: 700;
             user-select: none;
+            cursor: pointer;
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 20px;
+                padding: 25px 20px 35px;
             }
         }
     </style>
@@ -104,72 +112,64 @@
         <div class="header">
             <h1>Validador de documentos</h1>
             <div class="brand">Biofile</div>
-            <div class="subtitle">Suite profesional para prestadores de salud</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Código de seguridad:</div>
-            <div class="value">M1472S1Y154</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Centro Médico:</div>
-            <div class="value">Jairo Fernando Carmona Hernández</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">N°:</div>
-            <div class="value">154</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Fecha y Hora:</div>
-            <div class="value">15 Sep 2025 a las 10:41:53</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Lugar de Realización del Exámen:</div>
-            <div class="value">Quimbaya (Quindío, Colombia)</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">N° de Identificación:</div>
-            <div class="value">CC 1005086433</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Nombre Completo:</div>
-            <div class="value">Carlos Eduardo Orozco Grajales</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Nombre de la Empresa:</div>
-            <div class="value">Particulares - Contado</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Empresa en Misión:</div>
-            <div class="value">Alcaldía Municipal Armenia - Quindío</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Tipo de Exámen Médico Ocupacional:</div>
-            <div class="value">Examen Médico Salud Ocupacional de Ingreso</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Tipo de Concepto:</div>
-            <div class="value">Ingreso, Pre-ocupacional o Pre-ingreso</div>
-        </div>
-
-        <div class="data-row">
-            <div class="label">Concepto Médico Ocupacional:</div>
-            <div class="value">
-                Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
+            <div class="subtitle">
+                <span class="strong">Suite profesional</span>
+                <span class="soft"> para prestadores de salud</span>
             </div>
         </div>
 
-        <div class="button">✔ ¡Listo!</div>
+        <div class="data-row">
+            <span>Código de seguridad:</span> M1472S1Y154
+        </div>
+
+        <div class="data-row">
+            <span>Centro Médico:</span> Jairo Fernando Carmona Hernández
+        </div>
+
+        <div class="data-row">
+            <span>N°:</span> 154
+        </div>
+
+        <div class="data-row">
+            <span>Fecha y Hora:</span> 15 Sep 2025 a las 10:41:53
+        </div>
+
+        <div class="data-row">
+            <span>Lugar de Realización del Exámen:</span> Quimbaya (Quindío, Colombia)
+        </div>
+
+        <div class="data-row">
+            <span>N° de Identificación:</span> CC 1005086433
+        </div>
+
+        <div class="data-row">
+            <span>Nombre Completo:</span> Carlos Eduardo Orozco Grajales
+        </div>
+
+        <div class="data-row">
+            <span>Nombre de la Empresa:</span> Particulares - Contado
+        </div>
+
+        <div class="data-row">
+            <span>Empresa en Misión:</span> Alcaldía Municipal Armenia - Quindío
+        </div>
+
+        <div class="data-row">
+            <span>Tipo de Exámen Médico Ocupacional:</span> Examen Médico Salud Ocupacional de Ingreso
+        </div>
+
+        <div class="data-row">
+            <span>Tipo de Concepto:</span> Ingreso, Pre-ocupacional o Pre-ingreso
+        </div>
+
+        <div class="data-row">
+            <span>Concepto Médico Ocupacional:</span>
+            Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
+        </div>
+
+        <div class="button" onclick="window.close()">
+            ✔ ¡Listo!
+        </div>
 
     </div>
 
