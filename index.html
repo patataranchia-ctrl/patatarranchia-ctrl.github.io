@@ -198,11 +198,52 @@ body{
         Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
     </div>
 
+<style>
+  .btn-listo {
+    background-color: #28a745; /* Verde inicial */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Esto hace que el cambio de color sea suave */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Cuando pasas el mouse por encima (Hover) se pone azul claro */
+  .btn-listo:hover {
+    background-color: #007bff;
+    transform: translateY(-2px); /* Un pequeño salto para que se sienta vivo */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  }
+
+  /* Cuando haces clic (Active) se pone un azul más oscuro */
+  .btn-listo:active {
+    background-color: #0056b3;
+    transform: translateY(0);
+  }
+
+  .check {
+    font-size: 20px;
+  }
+</style>
+
 <button class="btn-listo" onclick="cerrarPagina()">
   <span class="check">✔</span>
   Listo
 </button>
 
+<script>
+  function cerrarPagina() {
+    // Aquí puedes poner lo que quieras que haga al pulsar
+    alert("¡Botón presionado!");
+    // window.close(); // Esto solo funciona si la ventana fue abierta por script
+  }
+</script>
 
 </div>
 
