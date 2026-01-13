@@ -1,36 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ser Letras</title>
+    <meta charset="UTF-8">
+    <title>Validador de Documentos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background-color: #0f172a;
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <style>
+        :root {
+            --blue-bg: #0b5fa5;
+            --card-bg: #eef6fb;
+            --primary: #0a6ccf;
+            --text-dark: #1b1b1b;
+            --border: #c9dbea;
+            --success: #1fa600;
+        }
 
-    .card {
-      background-color: #111827;
-      border: 2px solid #38bdf8;
-      border-radius: 14px;
-      padding: 50px;
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
-    }
-  </style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--blue-bg);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 520px;
+            padding: 30px 25px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .brand {
+            margin-top: 10px;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #4d6b82;
+            margin-top: 5px;
+        }
+
+        .data-row {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .label {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .value {
+            margin-top: 3px;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .button {
+            margin-top: 35px;
+            background-color: var(--success);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: default;
+            user-select: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="card">
-    Carlos
-  </div>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Validador de documentos</h1>
+            <div class="brand">Biofile</div>
+            <div class="subtitle">Suite profesional para prestadores de salud</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Código de seguridad:</div>
+            <div class="value">M1472S1Y154</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Centro Médico:</div>
+            <div class="value">Jairo Fernando Carmona Hernández</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">N°:</div>
+            <div class="value">154</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Fecha y Hora:</div>
+            <div class="value">15 Sep 2025 a las 10:41:53</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Lugar de Realización del Exámen:</div>
+            <div class="value">Quimbaya (Quindío, Colombia)</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">N° de Identificación:</div>
+            <div class="value">CC 1005086433</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Nombre Completo:</div>
+            <div class="value">Carlos Eduardo Orozco Grajales</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Nombre de la Empresa:</div>
+            <div class="value">Particulares - Contado</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Empresa en Misión:</div>
+            <div class="value">Alcaldía Municipal Armenia - Quindío</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Tipo de Exámen Médico Ocupacional:</div>
+            <div class="value">Examen Médico Salud Ocupacional de Ingreso</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Tipo de Concepto:</div>
+            <div class="value">Ingreso, Pre-ocupacional o Pre-ingreso</div>
+        </div>
+
+        <div class="data-row">
+            <div class="label">Concepto Médico Ocupacional:</div>
+            <div class="value">
+                Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
+            </div>
+        </div>
+
+        <div class="button">✔ ¡Listo!</div>
+
+    </div>
+
 </body>
 </html>
+
