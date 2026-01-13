@@ -66,54 +66,68 @@ body{
 }
 
 /* BRAND */
+.brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+}
 
-<div class="logo-container">
-  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2L3 7V12C3 17.41 6.84 22.38 12 24C17.16 22.38 21 17.41 21 12V7L12 2Z" fill="#007bff"/>
-    <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-  
-  <div class="texto-logo">
-    <span class="titulo">VALIDADOR</span>
-    <span class="subtitulo">DE DOCUMENTOS</span>
-  </div>
-</div>
+.brand svg{
+    width:96px;
+    height:96px;
+    transform:scaleX(-1) rotate(45deg);
+}
 
-<style>
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
+.brand-name{
+    font-size:74px;
+    font-weight:650;
+    color:var(--blue);
+    letter-spacing:0.15px;
+    line-height:1;
+}
 
-  .texto-logo {
-    text-align: center;
-    margin-top: 10px;
-  }
+/* SUBTITLE */
+.subtitle{
+    margin-top:4px;
+    font-size:14px;
+}
 
-  .titulo {
-    display: block;
-    font-size: 24px;
-    font-weight: 800;
-    color: #333;
-    letter-spacing: 2px;
-  }
+.subtitle strong{
+    color:var(--turquoise);
+    font-weight:700;
+}
 
-  .subtitulo {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    color: #666;
-    letter-spacing: 1px;
-    border-top: 1px solid #ccc;
-    padding-top: 2px;
-  }
-</style>
-    
+.subtitle span{
+    color:var(--blue-soft);
+}
+
+/* DATA */
+.row{
+    padding:12px 0;
+    border-bottom:1.5px solid var(--line);
+    font-size:15px;
+    color:var(--text);
+}
+
+.row strong{
+    color:var(--blue);
+    font-weight:600;
+}
+
+/* BUTTON */
+.done{
+    margin-top:38px;
+    background:var(--green);
+    color:#fff;
+    padding:16px;
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    border-radius:8px;
+    user-select:none;
+    cursor:pointer;
+}
 </style>
 </head>
 
@@ -246,4 +260,5 @@ body{
 
 </body>
 </html>
+
 
