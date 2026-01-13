@@ -1,177 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Validador de Documentos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Validador de documentos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --blue-bg: #0b5fa5;
-            --card-bg: #eef6fb;
-            --primary: #0a6ccf;
-            --secondary: #5b768b;
-            --text-dark: #1b1b1b;
-            --border: #c9dbea;
-            --success: #1fa600;
-        }
+<style>
+:root{
+    --blue-bg:#0b5fa5;
+    --card:#eef6fb;
+    --line:#c7d9e8;
+    --blue:#0a6ccf;
+    --blue-soft:#2f8fdd;
+    --text:#1a1a1a;
+    --green:#1fa600;
+}
 
-        * {
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        }
+*{
+    box-sizing:border-box;
+    font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+}
 
-        body {
-            margin: 0;
-            background-color: var(--blue-bg);
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
+body{
+    margin:0;
+    background:var(--blue-bg);
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+}
 
-        .container {
-            background-color: var(--card-bg);
-            width: 100%;
-            max-width: 560px;
-            padding: 35px 30px 40px;
-            border-radius: 14px;
-            margin: 20px;
-        }
+.card{
+    background:var(--card);
+    width:100%;
+    max-width:520px;
+    margin:25px;
+    padding:32px 28px 38px;
+    border-radius:16px;
+}
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+/* HEADER */
+.header{
+    text-align:center;
+    margin-bottom:26px;
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: 600;
-        }
+.header h1{
+    font-size:22px;
+    font-weight:500;
+    margin:0 0 10px;
+}
 
-        .brand {
-            margin-top: 10px;
-            font-size: 56px;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: 1px;
-        }
+.brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
 
-        .subtitle {
-            margin-top: 4px;
-            font-size: 14px;
-        }
+.brand svg{
+    width:48px;
+    height:48px;
+}
 
-        .subtitle .strong {
-            color: var(--primary);
-            font-weight: 700;
-        }
+.brand-name{
+    font-size:56px;
+    font-weight:800;
+    color:var(--blue);
+    letter-spacing:1px;
+}
 
-        .subtitle .soft {
-            color: var(--secondary);
-            font-weight: 500;
-        }
+.subtitle{
+    margin-top:4px;
+    font-size:14px;
+}
 
-        .data-row {
-            padding: 11px 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 15px;
-            color: var(--text-dark);
-        }
+.subtitle strong{
+    color:var(--blue);
+    font-weight:700;
+}
 
-        .data-row span {
-            font-weight: 600;
-            color: var(--primary);
-        }
+.subtitle span{
+    color:var(--blue-soft);
+}
 
-        .button {
-            margin-top: 40px;
-            background-color: var(--success);
-            color: white;
-            text-align: center;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 700;
-            user-select: none;
-            cursor: pointer;
-        }
+/* DATA */
+.row{
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+    color:var(--text);
+}
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px 20px 35px;
-            }
-        }
-    </style>
+.row strong{
+    color:var(--blue);
+    font-weight:600;
+}
+
+/* BUTTON */
+.done{
+    margin-top:36px;
+    background:var(--green);
+    color:#fff;
+    padding:16px;
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    border-radius:8px;
+    user-select:none;
+    cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="card">
 
-        <div class="header">
-            <h1>Validador de documentos</h1>
-            <div class="brand">Biofile</div>
-            <div class="subtitle">
-                <span class="strong">Suite profesional</span>
-                <span class="soft"> para prestadores de salud</span>
-            </div>
+    <div class="header">
+        <h1>Validador de documentos</h1>
+
+        <div class="brand">
+            <!-- LOGO SVG (académico, recreado) -->
+            <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="32" fill="#0a6ccf"/>
+                <path d="M14 34h10l4-10 6 20 4-10h12"
+                      fill="none"
+                      stroke="#ffffff"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+            <div class="brand-name">Biofile</div>
         </div>
 
-        <div class="data-row">
-            <span>Código de seguridad:</span> M1472S1Y154
+        <div class="subtitle">
+            <strong>Suite profesional</strong>
+            <span> para prestadores de salud</span>
         </div>
-
-        <div class="data-row">
-            <span>Centro Médico:</span> Jairo Fernando Carmona Hernández
-        </div>
-
-        <div class="data-row">
-            <span>N°:</span> 154
-        </div>
-
-        <div class="data-row">
-            <span>Fecha y Hora:</span> 15 Sep 2025 a las 10:41:53
-        </div>
-
-        <div class="data-row">
-            <span>Lugar de Realización del Exámen:</span> Quimbaya (Quindío, Colombia)
-        </div>
-
-        <div class="data-row">
-            <span>N° de Identificación:</span> CC 1005086433
-        </div>
-
-        <div class="data-row">
-            <span>Nombre Completo:</span> Carlos Eduardo Orozco Grajales
-        </div>
-
-        <div class="data-row">
-            <span>Nombre de la Empresa:</span> Particulares - Contado
-        </div>
-
-        <div class="data-row">
-            <span>Empresa en Misión:</span> Alcaldía Municipal Armenia - Quindío
-        </div>
-
-        <div class="data-row">
-            <span>Tipo de Exámen Médico Ocupacional:</span> Examen Médico Salud Ocupacional de Ingreso
-        </div>
-
-        <div class="data-row">
-            <span>Tipo de Concepto:</span> Ingreso, Pre-ocupacional o Pre-ingreso
-        </div>
-
-        <div class="data-row">
-            <span>Concepto Médico Ocupacional:</span>
-            Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
-        </div>
-
-        <div class="button" onclick="window.close()">
-            ✔ ¡Listo!
-        </div>
-
     </div>
+
+    <div class="row"><strong>Código de seguridad:</strong> M1472S1Y154</div>
+    <div class="row"><strong>Centro Médico:</strong> Jairo Fernando Carmona Hernández</div>
+    <div class="row"><strong>N°:</strong> 154</div>
+    <div class="row"><strong>Fecha y Hora:</strong> 15 Sep 2025 a las 10:41:53</div>
+    <div class="row"><strong>Lugar de Realización del Exámen:</strong> Quimbaya (Quindío, Colombia)</div>
+    <div class="row"><strong>N° de Identificación:</strong> CC 1005086433</div>
+    <div class="row"><strong>Nombre Completo:</strong> Carlos Eduardo Orozco Grajales</div>
+    <div class="row"><strong>Nombre de la Empresa:</strong> Particulares - Contado</div>
+    <div class="row"><strong>Empresa en Misión:</strong> Alcaldía Municipal Armenia - Quindío</div>
+    <div class="row"><strong>Tipo de Exámen Médico Ocupacional:</strong> Examen Médico Salud Ocupacional de Ingreso</div>
+    <div class="row"><strong>Tipo de Concepto:</strong> Ingreso, Pre-ocupacional o Pre-ingreso</div>
+    <div class="row">
+        <strong>Concepto Médico Ocupacional:</strong>
+        Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
+    </div>
+
+    <div class="done" onclick="window.close()">✔ ¡Listo!</div>
+
+</div>
 
 </body>
 </html>
