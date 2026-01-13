@@ -198,7 +198,19 @@ body{
         Sin condición que interfiera con su capacidad laboral para desarrollar el cargo asignado
     </div>
 
-    <div class="done" onclick="window.close()">✔ ¡Listo!</div>
+    <button onclick="cerrarPagina()">Listo</button>
+
+<script>
+function cerrarPagina() {
+  // Intenta cerrar la pestaña (PC / casos permitidos)
+  window.close();
+
+  // Fallback para móviles: vacía la página
+  setTimeout(() => {
+    window.location.href = "about:blank";
+  }, 100);
+}
+</script>
 
 </div>
 
